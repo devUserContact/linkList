@@ -7,14 +7,14 @@ linkList() {
 		;;		 
 		*)		 
 			read -rp 'Provide link list title : ' linkListTitle
-			read -rp 'How many links should be saved? : '	linkCount
+			read -rp 'What is the number of links to be saved? : '	linkCount
 
 			declare -a linkTitle=()
 			declare -a linkURL=()
 
 			echo -e "\n"
 
-			for linkData in $( seq 1 $linkCount ); 
+			for linkData in $( seq 1 "$linkCount" ); 
 			do 
 				read -rp "Provide the title of link number $linkData : " title 
 				read -rp "Provide the URL of link number $linkData : "	url
@@ -28,14 +28,14 @@ linkList() {
 
 			linkNumber=$((linkCount-1))
 
-			for number in $(seq 0 $linkNumber); 
+			for number in $(seq 0 "$linkNumber"); 
 			do	
 				echo -e "[${linkTitle[$number]}][$((number + 1))]\n" >> "$linkListTitle.md"
 			done;
 
 			echo -e "___" >> "$linkListTitle.md"
 			
-			for number in $(seq 0 $linkNumber); 
+			for number in $(seq 0 "$linkNumber"); 
 			do	
 				echo -e "[$((number + 1))]:${linkURL[$number]}" >> "$linkListTitle.md"
 			done;
