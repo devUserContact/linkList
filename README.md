@@ -1,5 +1,5 @@
 # linkList
-## a script that generates a list of hyperlinks in Markdown file
+## a script that generates a list of hyperlinks in a Markdown file
 ___
 ```bash
 #example:
