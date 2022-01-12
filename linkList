@@ -1,10 +1,10 @@
 #!/bin/bash
 
 linkList() {
- case $1 in 
-	 -a)
+	case $1 in 
+		-a)
 			
-			;;		 
+		;;		 
 		*)		 
 			read -rp 'Provide link list title : ' linkListTitle
 			read -rp 'How many links should be saved? : '	linkCount
